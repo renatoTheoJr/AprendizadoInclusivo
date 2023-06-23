@@ -63,10 +63,36 @@ VALUES (1, 'CON0000001', TO_DATE('10/06/2023 09:00:00','DD/MM/YYYY HH24:MI:SS'),
 
 INSERT INTO Aula (id, oferecimento, data_hora_inicio, data_hora_fim, sitio, numeracao)
 VALUES (2, 'CON0000001', TO_DATE('17/06/2023 14:00:00','DD/MM/YYYY HH24:MI:SS'),TO_DATE('17/06/2023 17:00:00','dd/mm/yyyy HH24:MI:SS'), 'Sala 102', '02');
+INSERT INTO Aula (id, oferecimento, data_hora_inicio, data_hora_fim, sitio, numeracao)
+VALUES (3, 'CON0000001', TO_DATE('18/06/2023 14:00:00','DD/MM/YYYY HH24:MI:SS'),TO_DATE('18/06/2023 17:00:00','dd/mm/yyyy HH24:MI:SS'), 'Sala 102', '02');
+
+INSERT INTO Aula (id, oferecimento, data_hora_inicio, data_hora_fim, sitio, numeracao)
+VALUES (4, 'CON0000001', TO_DATE('19/06/2023 14:00:00','DD/MM/YYYY HH24:MI:SS'),TO_DATE('19/06/2023 17:00:00','dd/mm/yyyy HH24:MI:SS'), 'Sala 102', '02');
+
+INSERT INTO Aula (id, oferecimento, data_hora_inicio, data_hora_fim, sitio, numeracao)
+VALUES (5, 'CON0000002', TO_DATE('15/06/2023 14:00:00','DD/MM/YYYY HH24:MI:SS'),TO_DATE('15/06/2023 17:00:00','dd/mm/yyyy HH24:MI:SS'), 'Sala 102', '02');
+
 
 
 INSERT INTO Presenca (aluno, aula, assistente)
 VALUES ('77284063025', 1, '55738026071');
+INSERT INTO Presenca (aluno, aula, assistente)
+VALUES ('77284063025', 2, '55738026071');
+INSERT INTO Presenca (aluno, aula, assistente)
+VALUES ('77284063025', 3, '25547587001');
+INSERT INTO Presenca (aluno, aula, assistente)
+VALUES ('77284063025', 4, '25547587001');
+INSERT INTO Presenca (aluno, aula, assistente)
+VALUES ('77284063025', 5, '55738026071');
+
+INSERT INTO Presenca (aluno, aula, assistente)
+VALUES ('64514589020', 1, '55738026071');
+INSERT INTO Presenca (aluno, aula, assistente)
+VALUES ('64514589020', 3, '25547587001');
+INSERT INTO Presenca (aluno, aula, assistente)
+VALUES ('64514589020', 4, '25547587001');
+
+
 
 INSERT INTO Presenca (aluno, aula, assistente)
 VALUES ('64514589020', 2, '55738026071');
