@@ -1,7 +1,7 @@
 INSERT INTO Deficiencia (cid, nome, tipo)
-VALUES ('001', 'DeficiÍcia Visual', 'VISUAL');
+VALUES ('001', 'Defici√™cia Visual', 'VISUAL');
 INSERT INTO Deficiencia (cid, nome, tipo)
-VALUES ('002', 'DeficiÍcia FÌsica', 'FÕSICA');
+VALUES ('002', 'Defici√™cia F√≠sica', 'F√çSICA');
 
 INSERT INTO Escola (cnpj, nome, email, rua, numero, bairro, cidade, estado, natureza, telefone_fixo, telefone_celular)
 VALUES ('12345678901234', 'Escola Estadual ABC', 'escolaabc@example.com', 'Rua das Escolas', 123, 'Centro', 'Cidade A', 'SP', 'PUBLICA', '1122334455', '9988776655');
@@ -10,74 +10,73 @@ INSERT INTO Escola (cnpj, nome, email, rua, numero, bairro, cidade, estado, natu
 VALUES ('98765432109876', 'Escola Particular XYZ', 'escolaxyz@example.com', 'Avenida das Escolas', 456, 'Bairro X', 'Cidade B', 'RJ', 'PRIVADA', '5544332211', '5566778899');
 
 INSERT INTO Curso (nome, duracao, descricao, deficiencia)
-VALUES ('IntroduÁ„o†‡ Inform·tica', 10, 'Aprenda conceitos b·sicos de inform·tica e uso de computadores', '001');
+VALUES ('Introdu√ß√£o √† Inform√°tica', 10, 'Aprenda conceitos b√°sicos de inform√°tica e uso de computadores', '001');
 
 INSERT INTO Curso (nome, duracao, descricao, deficiencia)
-VALUES ('ProgramaÁ„o em Python', 12, 'Aprenda a programar utilizando a linguagem Python', '002');
+VALUES ('Programa√ß√£o em Python', 12, 'Aprenda a programar utilizando a linguagem Python', '002');
 
 INSERT INTO Professor (cpf, nome, rua, numero, bairro, cidade, estado, telefone_fixo, telefone_celular, formacao)
-VALUES ('12345678901', 'Jo„o Silva', 'Rua dos Professores', 123, 'Centro', 'Cidade A', 'SP', '1122334455', '9988776655', 'BCC');
+VALUES ('48425678056', 'Jo√£o Silva', 'Rua dos Professores', 123, 'Centro', 'Cidade A', 'SP', '1122334455', '9988776655', 'BCC');
 
 INSERT INTO Professor (cpf, nome, rua, numero, bairro, cidade, estado, telefone_fixo, telefone_celular, formacao)
-VALUES ('98765432109', 'Maria Souza', 'Avenida das Escolas', 456, 'Bairro X', 'Cidade B', 'RJ', '5544332211', '5566778899', 'BSI');
-
-
-INSERT INTO Assistente (cpf, nome, rua, numero, bairro, cidade, estado, telefone_fixo, telefone_celular)
-VALUES ('11111111111', 'Pedro Oliveira', 'Rua dos Assistentes', 321, 'Centro', 'Cidade A', 'SP', '1122334455', '9988776655');
+VALUES ('26576719000', 'Maria Souza', 'Avenida das Escolas', 456, 'Bairro X', 'Cidade B', 'RJ', '5544332211', '5566778899', 'BSI');
 
 INSERT INTO Assistente (cpf, nome, rua, numero, bairro, cidade, estado, telefone_fixo, telefone_celular)
-VALUES ('22222222222', 'Ana Santos', 'Avenida dos Assistentes', 654, 'Bairro Y', 'Cidade B', 'RJ', '5544332211', '5566778899');
+VALUES ('55738026071', 'Pedro Oliveira', 'Rua dos Assistentes', 321, 'Centro', 'Cidade A', 'SP', '1122334455', '9988776655');
+
+INSERT INTO Assistente (cpf, nome, rua, numero, bairro, cidade, estado, telefone_fixo, telefone_celular)
+VALUES ('25547587001', 'Ana Santos', 'Avenida dos Assistentes', 654, 'Bairro Y', 'Cidade B', 'RJ', '5544332211', '5566778899');
 
 INSERT INTO Vinculo (cpf, vinculo)
-VALUES ('12345678901', 'PROFESSOR');
+VALUES ('48425678056', 'PROFESSOR');
 INSERT INTO Vinculo (cpf, vinculo)
-VALUES ('98765432109', 'PROFESSOR');
+VALUES ('26576719000', 'PROFESSOR');
 INSERT INTO Vinculo (cpf, vinculo)
-VALUES ('11111111111', 'ASSISTENTE');
+VALUES ('55738026071', 'ASSISTENTE');
 INSERT INTO Vinculo (cpf, vinculo)
-VALUES ('22222222222', 'ASSISTENTE');
+VALUES ('25547587001', 'ASSISTENTE');
 
 
 INSERT INTO Oferecimento (num_contrato, curso, escola, professor, doacao, data_inicio, data_fim)
-VALUES ('CON0000001', 'IntroduÁ„o†‡ Inform·tica', '12345678901234', '12345678901', 0, TO_DATE('01/06/2023','dd/mm/yyyy'),TO_DATE('31/07/2023','dd/mm/yyyy'));
+VALUES ('CON0000001', 'Introdu√ß√£o √† Inform√°tica', '12345678901234', '48425678056', 0, TO_DATE('01/06/2023','dd/mm/yyyy'),TO_DATE('31/07/2023','dd/mm/yyyy'));
 
 INSERT INTO Oferecimento (num_contrato, curso, escola, professor, doacao, data_inicio, data_fim)
-VALUES ('CON0000002', 'ProgramaÁ„o em Python', '98765432109876', '98765432109', 500.00, TO_DATE('15/07/2023','dd/mm/yyyy'),TO_DATE('15/09/2023','dd/mm/yyyy'));
+VALUES ('CON0000002', 'Programa√ß√£o em Python', '98765432109876', '26576719000', 500.00, TO_DATE('15/07/2023','dd/mm/yyyy'),TO_DATE('15/09/2023','dd/mm/yyyy'));
 
 INSERT INTO Aluno (cpf, deficiencia, grau, nome, atestado, telefone_fixo, telefone_celular)
-VALUES ('77777777777', '001', 'B', 'Joana Santos', 'Atestado M√©dico', '1122334455', '9988776655');
+VALUES ('80462935043', '001', 'B', 'Joana Santos', 'Atestado M√É¬©dico', '1122334455', '9988776655');
 
 INSERT INTO Aluno (cpf, deficiencia, grau, nome, atestado, telefone_fixo, telefone_celular)
-VALUES ('88888888888', '002', 'C', 'Ricardo Silva', 'Atestado Escolar', '5544332211', '5566778899');
+VALUES ('37034141037', '002', 'C', 'Ricardo Silva', 'Atestado Escolar', '5544332211', '5566778899');
 INSERT INTO Aluno (cpf, deficiencia, grau, nome, atestado, telefone_fixo, telefone_celular)
-VALUES ('99999999999', '001', 'A', 'Fernanda Oliveira', 'Atestado M√©dico', NULL, '9911223344');
+VALUES ('77284063025', '001', 'A', 'Fernanda Oliveira', 'Atestado M√É¬©dico', NULL, '9911223344');
 
 INSERT INTO Aluno (cpf, deficiencia, grau, nome, atestado, telefone_fixo, telefone_celular)
-VALUES ('10101010101', '002', 'D', 'Lucas Pereira', 'Atestado Escolar', NULL, '9988776655');
+VALUES ('63567319078', '002', 'D', 'Lucas Pereira', 'Atestado Escolar', NULL, '9988776655');
 
 INSERT INTO Aluno (cpf, deficiencia, grau, nome, atestado, telefone_fixo, telefone_celular)
-VALUES ('12121212121', '001', 'E', 'Camila Costa', 'Atestado M√©dico', '1122334455', NULL);
+VALUES ('64514589020', '001', 'E', 'Camila Costa', 'Atestado M√É¬©dico', '1122334455', NULL);
 
 
 INSERT INTO Aula (id, oferecimento, data_hora_inicio, data_hora_fim, sitio, numeracao)
-VALUES (1, 'CON0000001', TO_DATE('2023-06-10 09:00:00','dd/mm/yyyy HH24:MI:SS'), TO_DATE('2023-06-10 12:00:00','dd/mm/yyyy HH24:MI:SS'), 'Sala 101', '01');
+VALUES (1, 'CON0000001', TO_DATE('10/06/2023 09:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('10/06/2023 12:00:00','dd/mm/yyyy HH24:MI:SS'), 'Sala 101', '01');
 
 INSERT INTO Aula (id, oferecimento, data_hora_inicio, data_hora_fim, sitio, numeracao)
-VALUES (2, 'CON0000001', TO_DATE('2023-06-17 14:00:00','dd/mm/yyyy HH24:MI:SS'),TO_DATE('2023-06-17 17:00:00','dd/mm/yyyy HH24:MI:SS'), 'Sala 102', '02');
+VALUES (2, 'CON0000001', TO_DATE('17/06/2023 14:00:00','DD/MM/YYYY HH24:MI:SS'),TO_DATE('17/06/2023 17:00:00','dd/mm/yyyy HH24:MI:SS'), 'Sala 102', '02');
 
 
 INSERT INTO Presenca (aluno, aula, assistente)
-VALUES ('99999999999', 1, '11111111111');
+VALUES ('77284063025', 1, '55738026071');
 
 INSERT INTO Presenca (aluno, aula, assistente)
-VALUES ('12121212121', 2, '11111111111');
+VALUES ('64514589020', 2, '55738026071');
 
 
 INSERT INTO Recurso (num_patrimonio, tipo, nome)
 VALUES ('1234567890', 'Computador', 'Computador de Mesa');
 
 INSERT INTO Recurso (num_patrimonio, tipo, nome)
-VALUES ('9876543210', 'Projetor', 'Projetor MultimÌdia');
+VALUES ('9876543210', 'Projetor', 'Projetor Multim√≠dia');
 
 INSERT INTO Aula_Recurso (aula, recurso)
 VALUES (1, '1234567890');

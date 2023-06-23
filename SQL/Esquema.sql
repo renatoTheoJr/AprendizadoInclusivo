@@ -4,7 +4,7 @@ CREATE TABLE Deficiencia (
     tipo VARCHAR2(15) NOT NULL,
 
     CONSTRAINT pk_deficiencia PRIMARY KEY (cid),
-    CONSTRAINT ck_tipo CHECK (tipo IN ('VISUAL', 'AUDITIVA', 'FÕSICA', 'INTELECTUAL', 'PSICOSOCIAL'))
+    CONSTRAINT ck_deficiencia_tipo CHECK (tipo IN ('VISUAL', 'AUDITIVA', 'F√çSICA', 'INTELECTUAL', 'PSICOSOCIAL'))
 );
 
 CREATE TABLE Escola (
