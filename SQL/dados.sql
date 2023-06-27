@@ -13,6 +13,12 @@ INSERT INTO Curso (nome, duracao, descricao, deficiencia)
 VALUES ('Introdução à Informática', 10, 'Aprenda conceitos básicos de informática e uso de computadores', '001');
 
 INSERT INTO Curso (nome, duracao, descricao, deficiencia)
+VALUES ('Introdução à celulares', 10, 'Aprenda conceitos básicos de como usar um celular', '001');
+
+INSERT INTO Curso (nome, duracao, descricao, deficiencia)
+VALUES ('Redes sociais', 10, 'Aprenda como ter sua rede social', '001');
+
+INSERT INTO Curso (nome, duracao, descricao, deficiencia)
 VALUES ('Programação em Python', 12, 'Aprenda a programar utilizando a linguagem Python', '002');
 
 INSERT INTO Professor (cpf, nome, rua, numero, bairro, cidade, estado, telefone_fixo, telefone_celular, formacao)
@@ -42,6 +48,10 @@ VALUES ('CON0000001', 'Introdução à Informática', '12345678901234', '4842567
 
 INSERT INTO Oferecimento (num_contrato, curso, escola, professor, doacao, data_inicio, data_fim)
 VALUES ('CON0000002', 'Programação em Python', '98765432109876', '26576719000', 500.00, TO_DATE('15/07/2023','dd/mm/yyyy'),TO_DATE('15/09/2023','dd/mm/yyyy'));
+
+INSERT INTO Oferecimento (num_contrato, curso, escola, professor, doacao, data_inicio, data_fim)
+VALUES ('CON0000003', 'Redes sociais', '98765432109876', '26576719000', 500.00, TO_DATE('15/07/2020','dd/mm/yyyy'),TO_DATE('15/09/2020','dd/mm/yyyy'));
+
 
 INSERT INTO Aluno (cpf, deficiencia, grau, nome, atestado, telefone_fixo, telefone_celular)
 VALUES ('80462935043', '001', 'B', 'Joana Santos', 'Atestado MÃ©dico', '1122334455', '9988776655');
