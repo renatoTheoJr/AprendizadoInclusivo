@@ -57,3 +57,6 @@ inner join professor p on p.cpf = o.professor
 -- Listar deficiências que não são abrangidas por nenhum curso
 select d.cid from deficiencia d left join curso c on c.deficiencia = d.cid
 where c.cid is null
+
+-- Listar deficiências e se tiver seus respectivos cursos
+select d.cid, c.nome from deficiencia d left join curso c on c.deficiencia = d.cid
