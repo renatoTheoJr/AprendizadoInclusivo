@@ -3,9 +3,9 @@ import os
 
 def conectarBanco():
     dsn_tns = cx_Oracle.makedsn('orclgrad1.icmc.usp.br', '1521', service_name='pdb_elaine.icmc.usp.br')# if needed, place an 'r' before any parameter in order to address special characters such as '\'.
-    user = 'a11796750'
-    senha = '1401021013'
-    conn = cx_Oracle.connect(user='a11796750', password='1401021013', dsn=dsn_tns) 
+    user = 'seu user'
+    senha = 'sua senha'
+    conn = cx_Oracle.connect(user=user, password=senha, dsn=dsn_tns) 
     return conn
 def fecharConexao(conn):
     conn.close()
