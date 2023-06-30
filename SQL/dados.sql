@@ -1,3 +1,4 @@
+-- Script para inserir dados nas tabelas do banco de dados
 INSERT INTO Deficiencia (cid, nome, tipo)
     VALUES ('001', 'Deficiêcia Visual', 'VISUAL');
 INSERT INTO Deficiencia (cid, nome, tipo)

@@ -1,3 +1,5 @@
+--Script para deletar todas as tabelas do banco de dados
+
 drop table PRESENCA cascade constraints;
 drop table RECURSO cascade constraints;
 drop table AULA_RECURSO cascade constraints;
