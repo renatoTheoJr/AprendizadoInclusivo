@@ -1,28 +1,55 @@
+-- Consulta recursos que um oferecimento usa - Rafael
+SELECT R.num_patrimonio, R.nome, R.tipo
+    FROM Recurso R
+    INNER JOIN Aula_Recurso AR ON AR.recurso = R.num_patrimonio
+    INNER JOIN Aula A ON A.id = AR.aula
+    INNER JOIN Oferecimento O ON O.num_contrato = A.oferecimento
+    WHERE O.num_contrato = 'CON0000001';
+
+-- Consulta alunos que tem presença em todas as aulas de um oferecimento - Rafael
+SELECT A.nome
+    FROM Aluno A
+    INNER JOIN Presenca P ON P.aluno = A.cpf
+    INNER JOIN Aula AU ON AU.id = P.aula
+    INNER JOIN Oferecimento O ON O.num_contrato = AU.oferecimento
+    WHERE O.num_contrato = 'CON0000001'
+    GROUP BY A.nome
+    HAVING COUNT(*) = (
+        SELECT COUNT(*)
+        FROM Aula AU
+        WHERE AU.oferecimento = 'CON0000001'
+    );
+
+
  -- Lista todos os alunos que não faltaram nenhuma aula do contrato CON0000001
 
-select a.nome from aluno a where
-not exists((
-    select id from aula au where
-    au.oferecimento = 'CON0000001')
-    minus
-    (
-        select p.aula from presenca p where
-        p.aluno = a.cpf
-    )
-)
+SELECT A.nome
+    FROM Aluno A WHERE
+    NOT EXISTS (
+        (SELECT Au.id
+            FROM Aula Au
+            WHERE Au.oferecimento = 'CON0000001')
+        MINUS
+        (SELECT P.aula
+            FROM Presenca P
+            WHERE P.aluno = A.cpf
+        )
+    );
 
--- Lista todos os alunos que frequentaram pelo menos uma aula de todos ofereciementos do professor 26576719000
-select a.nome from aluno a where
-not exists((
-    select o.num_contrato from oferecimento o where
-    o.professor = '48425678056')
-    minus
-    (
-        select au.oferecimento from aula au where
-        au.id in (select p.aula from presenca p where
-        p.aluno = a.cpf)
-    )
-) 
+-- Lista todos os alunos que frequentaram pelo menos uma aula de todos ofereciementos do professor 48425678056
+SELECT A.nome
+    FROM Aluno A
+    WHERE NOT EXISTS (
+        (SELECT O.num_contrato
+            FROM Oferecimento O
+            WHERE O.professor = '48425678056')
+        MINUS
+        (SELECT Au.oferecimento
+            FROM Aula Au
+            WHERE Au.id IN (SELECT P.aula 
+                                FROM Presenca P
+                                WHERE P.aluno = A.cpf))
+    );
 
 -- Listar deficiências que são abrangidas por pelo menos 3 cursos
 select d.cid from deficiencia d inner join curso c on c.deficiencia = d.cid
